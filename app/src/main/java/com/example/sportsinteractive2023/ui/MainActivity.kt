@@ -1,7 +1,8 @@
-package com.example.sportsinteractive2023
+package com.example.sportsinteractive2023.ui
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.example.sportsinteractive2023.R
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
