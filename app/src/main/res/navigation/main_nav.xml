@@ -22,6 +22,9 @@
         <action
             android:id="@+id/action_matchDetailFragment_to_teamNPlayerInformationFragment"
             app:destination="@id/teamNPlayerInformationFragment" />
+        <argument
+            android:name="matchCode"
+            app:argType="string" />
     </fragment>
     <fragment
         android:id="@+id/teamNPlayerInformationFragment"

@@ -12,9 +12,9 @@ class MatchRepository @Inject constructor(
     private val apiService: ApiService
 ) {
 
-    suspend fun fetchMatchDetail(matchId:String): Flow<ApiResponse> {
+    suspend fun fetchMatchDetail(matchCode:String): Flow<ApiResponse> {
         return flow {
-            val response = apiService.fetchMatchDetail(matchId);
+            val response = apiService.fetchMatchDetail(matchCode)
             emit(response)
         }.flowOn(Dispatchers.IO)
     }

@@ -15,6 +15,7 @@ import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 import java.util.concurrent.TimeUnit
 
+
 @Module
 @InstallIn(SingletonComponent::class)
 object NetworkModule {
@@ -34,8 +35,9 @@ object NetworkModule {
         val gson = GsonBuilder()
             .setLenient()
             .create()
+        val factory = GsonConverterFactory.create(gson)
         return Retrofit.Builder().baseUrl(Constants.BASE_URL)
-            .addConverterFactory(GsonConverterFactory.create(gson))
+            .addConverterFactory(factory)
             .client(httpClient.build())
             .build()
 
@@ -45,5 +47,6 @@ object NetworkModule {
     fun provideApiService(retrofit: Retrofit): ApiService {
         return retrofit.create(ApiService::class.java)
     }
+
 
 }

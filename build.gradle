@@ -23,6 +23,5 @@ ext {
     lifecycleVersion = '2.4.0'
     retrofitVersion = '2.9.0'
     okHttpLogInterceptorVersion = '5.0.0-alpha.2'
-    timberVersion  = '5.0.1'
     nav_version = "2.5.3"
 }
