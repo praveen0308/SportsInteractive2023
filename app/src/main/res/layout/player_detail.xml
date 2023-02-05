@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="16dp">
+
+
+    <TextView
+        android:id="@+id/tv_position"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_circle"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="A" />
+
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tv_position"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="TextView" />
+
+    <TextView
+        android:id="@+id/tv_type"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/red"
+        android:textSize="12sp"
+        android:textStyle="bold"
+
+        app:layout_constraintStart_toStartOf="@+id/tv_name"
+        app:layout_constraintTop_toBottomOf="@+id/tv_name"
+        tools:text="C&amp;WK" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@+id/tv_position">
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Batting Stats"
+            android:textColor="@color/black"
+            android:textStyle="bold" />
+
+        <View
+            android:id="@+id/divider"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_marginTop="8dp"
+            android:background="?android:attr/listDivider" />
+
+        <LinearLayout
+            android:id="@+id/ll_batting"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <com.example.sportsinteractive2023.ui.DetailRow
+                android:id="@+id/batting_row_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:label="Style"
+                app:value="-" />
+
+            <com.example.sportsinteractive2023.ui.DetailRow
+                android:id="@+id/batting_row_2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:label="Average"
+                app:value="-" />
+
+            <com.example.sportsinteractive2023.ui.DetailRow
+                android:id="@+id/batting_row_3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:label="Strike Rate"
+                app:value="-" />
+
+            <com.example.sportsinteractive2023.ui.DetailRow
+                android:id="@+id/batting_row_4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:label="Runs"
+                app:value="-" />
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Bowling Stats"
+            android:textColor="@color/black"
+            android:textStyle="bold" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_marginTop="8dp"
+            android:background="?android:attr/listDivider" />
+
+        <LinearLayout
+            android:id="@+id/ll_bowling"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <com.example.sportsinteractive2023.ui.DetailRow
+                android:id="@+id/bowling_row_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:label="Style"
+                app:value="-" />
+
+            <com.example.sportsinteractive2023.ui.DetailRow
+                android:id="@+id/bowling_row_2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:label="Average"
+                app:value="-" />
+
+            <com.example.sportsinteractive2023.ui.DetailRow
+                android:id="@+id/bowling_row_3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:label="Economy Rate"
+                app:value="-" />
+
+            <com.example.sportsinteractive2023.ui.DetailRow
+                android:id="@+id/bowling_row_4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:label="Wickets"
+                app:value="-" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
